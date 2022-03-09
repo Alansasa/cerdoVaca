@@ -46,8 +46,8 @@ document.addEventListener("mousedown", insertarImagen);
     };
     
 // "tx" y "ty", son las coordenadas de "x" y "y", desde las que partira la imagen del cerdo. 
-    var tx = 210;
-    var ty = 210;
+    var cx = 210;
+    var cy = 210;
 
 /* "vx" y "vy", son las pocisiones en "x" y en "y", desde las que partira la imagen de la vaca
 pero para aqui solo sera necesario definirlas sin darle algun valor.*/
@@ -63,24 +63,24 @@ function insertarImagen(evento){
     // codigo para el cerdo.
         switch (evento.keyCode){
             case teclas.RIGHT:
-                lienzo.drawImage(cerdo.imagen, tx + 10, ty);
-                tx = tx + 10;
-                ty = ty;
+                lienzo.drawImage(cerdo.imagen, cx + 10, cy);
+                cx = cx + 10;
+                cy = cy;
             break;
             case teclas.UP:
-                lienzo.drawImage(cerdo.imagen, tx, ty - 10);
-                tx = tx;
-                ty = ty - 10;
+                lienzo.drawImage(cerdo.imagen, cx, cy - 10);
+                cx = cx;
+                cy = cy - 10;
             break;
             case teclas.LEFT:
-                lienzo.drawImage(cerdo.imagen, tx - 10, ty);
-                tx = tx - 10;
-                ty = ty;
+                lienzo.drawImage(cerdo.imagen, cx - 10, cy);
+                cx = cx - 10;
+                cy = cy;
             break;
             case teclas.DOWN:
-                lienzo.drawImage(cerdo.imagen, tx, ty + 10);
-                tx = tx;
-                ty = ty + 10;
+                lienzo.drawImage(cerdo.imagen, cx, cy + 10);
+                cx = cx;
+                cy = cy + 10;
     }
 
     // CODIGO PARA LA VACA;
